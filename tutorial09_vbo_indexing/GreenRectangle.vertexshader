@@ -1,0 +1,11 @@
+#version 120
+
+attribute vec3 vertexPosition_modelspace;
+
+varying vec3 fragColor;
+
+void main() {
+    gl_Position = gl_ModelViewProjectionMatrix * vec4(vertexPosition_modelspace, 1.0);
+        fragColor = vec3(0.0, 1.0, 0.0); // Green color
+        }
+
